@@ -6,6 +6,13 @@
    - or whatever the latest url is from https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
  - unzip that file
  - ```$ google_appengine/appcfg.py -A twenty-four-game -V v1 update .```
+  - This requires authenticating to your [google account](https://cloud.google.com/appengine/docs/python/tools/uploadinganapp)
+  - I did it by connecting to the google cloud platform service (then disconnecting again), not sure if there is an easier way.  
+    - to connect that service, go to the cloud9 dashboard, click on the gear, choose "connected services", then connect
+ - Don't do these, they no longer work or aren't worth it:
+   - You can (or used to be able to?) [push to deploy](https://c9.io/blog/deploy-to-google-app-engine-with-cloud9-and-git/) the app.  That either no longer works, or I just can't figure out how to do it.
+   - cloud9 has some [integration with Google App Engine](https://cloudplatform.googleblog.com/2016/01/Cloud9-IDE-now-supports-Google-Cloud-Platform.html), so you can run gcloud.  But the tight integration is only set up for Java (as of 2016-03-28), and I'm not sure if gcloud costs money.
+
 
 ## Python Flask Skeleton for Google App Engine
 
