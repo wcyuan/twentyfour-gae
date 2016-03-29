@@ -1,3 +1,12 @@
+## To deploy from cloud9
+
+ - create a cloud9 workspace from this repo
+ - Edit the source as desired
+ - ```$ wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.35.zip```
+   - or whatever the latest url is from https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
+ - unzip that file
+ - ```$ google_appengine/appcfg.py -A twenty-four-game -V v1 update .```
+
 ## Python Flask Skeleton for Google App Engine
 
 ![status: inactive](https://img.shields.io/badge/status-inactive-red.svg)
