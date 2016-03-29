@@ -1,17 +1,21 @@
 ## To deploy from cloud9
 
- - create a cloud9 workspace from this repo
- - Edit the source as desired
- - ```$ wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.35.zip```
-   - or whatever the latest url is from https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
- - unzip that file
- - ```$ google_appengine/appcfg.py -A twenty-four-game -V v1 update .```
-  - This requires authenticating to your [google account](https://cloud.google.com/appengine/docs/python/tools/uploadinganapp)
-  - I did it by connecting to the google cloud platform service (then disconnecting again), not sure if there is an easier way.  
-    - to connect that service, go to the cloud9 dashboard, click on the gear, choose "connected services", then connect
- - Don't do these, they no longer work or aren't worth it:
-   - You can (or used to be able to?) [push to deploy](https://c9.io/blog/deploy-to-google-app-engine-with-cloud9-and-git/) the app.  That either no longer works, or I just can't figure out how to do it.
-   - cloud9 has some [integration with Google App Engine](https://cloudplatform.googleblog.com/2016/01/Cloud9-IDE-now-supports-Google-Cloud-Platform.html), so you can run gcloud.  But the tight integration is only set up for Java (as of 2016-03-28), and I'm not sure if gcloud costs money.
+
+ - cloud9 has some [integration with Google App Engine](https://cloudplatform.googleblog.com/2016/01/Cloud9-IDE-now-supports-Google-Cloud-Platform.html).
+   The tight integration is only set up for Java (as of 2016-03-28), and I'm not sure if gcloud costs money.
+   However, you can use this to authenticate to get appcfg.py to work.
+   - Create the project in Google App Engine
+   - Create the source repository in the Google Development Platform
+   - On Cloud9, connect your Google account
+   - Create a new workspace, choose a Google Cloud Platform workspace
+   - That workspace will have some google sdk installed, but it doesn't have appcfg.py, so you need to get that
+     - ```$ wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.35.zip```
+     - or whatever the latest url is from https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python
+     - unzip that file
+   - Then deploy with:
+     ```$ google_appengine/appcfg.py -A twenty-four-game -V v1 update .```
+
+  - You used to be able to [push to deploy](https://c9.io/blog/deploy-to-google-app-engine-with-cloud9-and-git/) the app, but that either no longer works, or I just can't figure out how to do it.
 
 This is deployed to [twenty-four-game.appspot.com](http://twenty-four-game.appspot.com).
 
