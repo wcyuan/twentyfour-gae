@@ -9,12 +9,14 @@ You must use each number exactly once. ({{num}} answers found)
 <pre>
 {{vals}}
 </pre>
-<div>
+<button type="button" id="button">Show Answers</button>
+<div class="hidden" id="answers">
     <pre>
 Answers:
 
 {{results}}
     </pre>
 </div>
+<script src="{{ url_for('static', filename='code.js') }}"></script>
 </body>
 </html>
